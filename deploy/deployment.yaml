@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vldapi-deployment
+spec:
+  selector:
+    matchLabels:
+      app: vldapi-app
+  template:
+    metadata:
+      labels:
+        app: vldapi-app
+    spec:
+      containers:
+      - name: vldapi-container
+        image: jorgeabrego/my-fastapi-app:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8000
