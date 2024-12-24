@@ -22,5 +22,5 @@ jobs:
     - name: Build and push Docker image
       run: |
         VERSION=$(echo $GITHUB_REF_NAME | cut -d'/' -f2)
-        docker build -t <your-dockerhub-username>/vld-api:${VERSION}-rc .
-        docker push <your-dockerhub-username>/vld-api:${VERSION}-rc
+        docker build -t jorgeabrego/vld-api:${VERSION}-rc .
+        docker push jorgeabrego/vld-api:${VERSION}-rc
